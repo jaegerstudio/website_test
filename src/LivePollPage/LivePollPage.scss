@@ -1,0 +1,88 @@
+@import '../App.scss';
+
+.livepoll-main {
+    display: flex;
+    gap: 5px;
+    background-color: rgb(233, 231, 231);
+
+    .css-ee20y-MuiPaper-root {
+        background-color: rgb(243, 244, 248);
+        margin: 0 10px;
+        border-radius: 10px;
+    }
+
+}
+
+.livepoll-inside {
+    width: 25%;
+}
+
+.livepoll-title-main {
+    width: 87%;
+    padding: 20px;
+    background-color: #F3F4F8;
+
+    .livepoll-title {
+        width: 92%;
+        margin: auto;
+        text-align: center;
+        @include flex(space-between, center);
+
+        p {
+            font-size: 22px;
+            font-weight: 400;
+        }
+    }
+}
+
+.livepoll-cards-main {
+    @include flex(content, center);
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    height: 550px;
+}
+
+.livepoll-card {
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    gap: 30px;
+
+    div:first-child::after {
+        content: "";
+        background: rgba(40, 40, 40, 0.08);
+        width: 1px;
+        height: 100px;
+        display: block;
+    }
+
+    div:first-child {
+        display: flex;
+        gap: 10px;
+    }
+
+    .livepoll-detail {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    img {
+        border-radius: 50px;
+    }
+}
+
+.livepoll-search{
+    width: 93%;
+    .css-1u3bzj6-MuiFormControl-root-MuiTextField-root{
+        width: 100%;
+    }
+    .css-1o9s3wi-MuiInputBase-input-MuiOutlinedInput-input{
+        margin-left: 20px;
+    }
+    .css-1q6at85-MuiInputBase-root-MuiOutlinedInput-root{
+        border-radius: 30px ;
+        height: 40px;
+    }
+}

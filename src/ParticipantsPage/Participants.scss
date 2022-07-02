@@ -1,0 +1,80 @@
+@import "../App.scss";
+
+.participants-main {
+  display: flex;
+  background-color: rgb(233, 231, 231);
+  overflow-x: hidden;
+  .css-ee20y-MuiPaper-root {
+    width: 100%;
+  }
+}
+
+.participants-inside {
+  width: 25%;
+  background-color: #fff;
+}
+.participants-title-main {
+  width: 87%;
+  padding: 20px;
+
+  .participants-title {
+    width: 100%;
+    text-align: center;
+    @include flex(space-between, center);
+    @include font-style(HelveticaNeue, 400, 22px, 26px);
+  }
+}
+.participants-search {
+  padding-top: 18px;
+  width: 93%;
+  .MuiOutlinedInput-root {
+    background-color: #f3f4f8;
+  }
+  .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+    width: 100%;
+  }
+  .css-1o9s3wi-MuiInputBase-input-MuiOutlinedInput-input {
+    margin-left: 20px;
+  }
+  .css-1q6at85-MuiInputBase-root-MuiOutlinedInput-root {
+    border-radius: 30px;
+  }
+}
+
+.participants-cards-main {
+  @include flex(content, center);
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  height: 550px;
+}
+
+.participants-card {
+  padding: 6px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+  padding: 0 20px;
+  gap: 16px;
+
+  div:first-child {
+    display: flex;
+    gap: 12px;
+  }
+  .participants-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    .user-name {
+      @include font-style(HelveticaNeue, 400, 16px, 19px);
+    }
+    .user-email {
+      @include font-style(HelveticaNeue, 400, 14px, 16px);
+    }
+  }
+  img {
+    border-radius: 50px;
+  }
+}

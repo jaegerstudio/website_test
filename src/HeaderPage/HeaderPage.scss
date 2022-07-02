@@ -1,0 +1,75 @@
+@import "../App.scss";
+$background: #ffff;
+
+.header-page-container {
+  background-color: $background;
+  //position: fixed;
+  z-index: 20;
+  width: 100%;
+}
+.header-page-main {
+  @include flex(space-between, center);
+  margin: 0 3% 0 3%;
+  padding: 25px 0;
+}
+
+.header-page-logo {
+  @include flex(space-between, center);
+  gap: 5px;
+}
+.header-page-logo-img {
+  max-width: 215px;
+  max-height: 56px;
+}
+
+.header-page-logo-img:hover {
+  cursor: pointer;
+}
+
+.header-page-actions {
+  @include flex(center, center);
+  gap: 76px;
+}
+
+.header-page-actions p {
+  @include font-style(HelveticaNeue, 400, 16px, 18.77px);
+}
+.black-rounded-btn {
+  background-color: #282828;
+  border-radius: 9999px;
+  padding: 18px 52px;
+  color: white;
+}
+
+.black-rounded-btn:hover {
+  @include bg-gradient;
+  color: white;
+  transition: ease-in-out;
+  transition-duration: 400ms;
+  cursor: pointer;
+}
+
+.header-page-actions p:hover:nth-child(-n + 3) {
+  cursor: pointer;
+  color: #4c6fff;
+}
+
+@media (max-width: 1366px) {
+  .header-page-main {
+    margin: 0 6% 0 6%;
+    padding: 16px 0;
+  }
+
+  .header-page-actions {
+    gap: 48px;
+  }
+
+  .black-rounded-btn {
+    padding: 14px 40px;
+  }
+
+  .header-page-logo-img {
+    max-width: 200px;
+    max-height: 56px;
+  }
+}

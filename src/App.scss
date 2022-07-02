@@ -1,0 +1,83 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+// colors
+@mixin banner-h-color {
+  color: #ffffff;
+}
+@mixin main-h-color {
+  color: #282828;
+}
+@mixin para-color {
+  color: #6b6f7a;
+}
+@mixin tag-color {
+  color: #000000;
+}
+@mixin flex($propert1, $property2) {
+  display: flex;
+  justify-content: $propert1;
+  align-items: $property2;
+}
+
+@mixin font-style($font, $weight, $size, $lineHeight) {
+  font-family: $font;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $lineHeight;
+}
+@mixin title {
+  /* gradient */
+  background: linear-gradient(
+    90.98deg,
+    #ff68c3 0%,
+    #ff7474 29.69%,
+    #5771f9 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@mixin bg-gradient {
+  /* gradient */
+  background: linear-gradient(
+    90.98deg,
+    #ff68c3 0%,
+    #ff7474 29.69%,
+    #5771f9 100%
+  );
+}
+body {
+  background-color: #f8f8f8;
+}
+
+/* Container */
+
+@mixin container {
+  width: 100%;
+
+  @media (min-width: 640px) {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  /* md*/
+  @media (min-width: 768px) {
+    max-width: 768px;
+  }
+  /* lg*/
+  @media (min-width: 1024px) {
+    max-width: 1024px;
+  }
+  /* xl*/
+  @media (min-width: 1280px) {
+    max-width: 1280px;
+  }
+  /* xl*/
+  @media (min-width: 1530px) {
+    max-width: 1530px;
+  }
+}
+
+.css-i4bv87-MuiSvgIcon-root{
+  cursor: pointer;
+}

@@ -1,0 +1,74 @@
+@import '../App.scss';
+
+.event-agenda-main {
+    display: flex;
+    gap: 5px;
+    background-color: rgb(233, 231, 231);
+
+    .css-ee20y-MuiPaper-root {
+        background-color: rgb(243, 244, 248);
+        margin: 0 10px;
+        border-radius: 10px;
+    }
+
+}
+
+.event-agenda-inside {
+    width: 25%;
+}
+
+.event-agenda-title-main {
+    width: 87%;
+    padding: 20px;
+    background-color: #F3F4F8;
+
+    .event-agenda-title {
+        width: 92%;
+        margin: auto;
+        text-align: center;
+        @include flex(space-between, center);
+
+        p {
+            font-size: 22px;
+            font-weight: 400;
+        }
+    }
+}
+
+.event-agenda-cards-main {
+    @include flex(content, center);
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    height: 550px;
+}
+
+.event-agenda-card {
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    gap: 30px;
+
+    div:first-child::after {
+        content: "";
+        background: rgba(40, 40, 40, 0.08);
+        width: 1px;
+        height: 100px;
+        display: block;
+    }
+
+    div:first-child {
+        display: flex;
+        gap: 10px;
+    }
+
+    .event-agenda-detail {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    img {
+        border-radius: 50px;
+    }
+}

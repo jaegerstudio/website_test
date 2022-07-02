@@ -1,0 +1,175 @@
+@import "../../App.scss";
+.upcoming-events-head .title {
+  @include title();
+  @include font-style(fellix, 800, 48px, 58.01px);
+}
+.upcoming-events-main {
+  width: 72%;
+  margin: auto;
+}
+.upcoming-events-head {
+  @include flex(space-between, center);
+  padding-bottom: 46px;
+}
+.upcoming-events-head-option {
+  display: flex;
+  gap: 10px;
+}
+.upcoming-events-cards-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 48px;
+}
+.upcoming-events-card {
+  background-color: #ffff;
+  width: 440px;
+  height: 580px;
+  margin-bottom: 24px;
+  img {
+    object-fit: cover;
+  }
+}
+
+.upcoming-events-card-img {
+  width: 440px;
+  height: 245px;
+}
+
+.upcoming-events-card:hover{
+  transform: scale(1.02);
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  -o-transform: scale(1.02);
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+.upcoming-event-card-detail {
+  padding: 20px 16px 36px 16px;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  gap: 16px;
+  .month {
+    @include font-style(fellixMedium, 500, 24px, 28px);
+    color: #4c6fff;
+  }
+  .day {
+    @include font-style(fellixBold, 700, 24px, 28px);
+    color: #000000;
+    padding-top: 8px;
+  }
+  .time {
+    @include font-style(helvetica, 400, 18px, 20px);
+    color: #000000;
+    padding-top: 16px;
+  }
+  .event-heading {
+    @include font-style(fellixBold, 700, 24px, 28px);
+    color: #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+           line-clamp: 1; 
+    -webkit-box-orient: vertical;
+  }
+  .event-desc {
+    @include font-style(helvetica, 400, 16px, 28px);
+    @include para-color;
+    margin-top: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* number of lines to show */
+           line-clamp: 4; 
+    -webkit-box-orient: vertical;
+  }
+}
+.upcoming-event-card-detail div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px
+}
+
+.upcoming-events-tags {
+  @include flex(start, center);
+  gap: 24px;
+  .tag {
+    @include font-style(helveticanue, 400, 16px, 16px);
+    @include tag-color();
+    background-color: #ffffff;
+    @include flex(center, center);
+    gap: 12px;
+    padding: 19px 24px;
+    border-radius: 9999px;
+    .upcoming-events-tags-svg {
+      fill: #0000005c;
+    }
+    .upcoming-events-tags-svg:hover {
+      cursor: pointer;
+      fill: rgb(28, 27, 27);
+    }
+  }
+}
+
+.date-pick {
+  padding: 7px;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+}
+
+.upcoming-event-speakers{
+  display: flex !important;
+  flex-direction: row !important;
+  margin-top: 8px;
+}
+.upcoming-event-speakers img{
+  border-radius: 50px;
+}
+.upcoming-event-speakers img:not(:first-child){
+  margin-left: -20px;
+}
+.upcoming-event-speakers img:hover{
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 1366px) {
+  
+  .upcoming-events-main {
+    width: 82%;
+  }
+
+  .upcoming-events-card {
+    width: 352px;
+    height: 520px;
+  }
+
+  .upcoming-events-card-img {
+    width: 352px;
+    height: 200px;
+  }
+
+  .upcoming-event-card-detail {
+    padding: 20px 16px 36px 16px;
+    gap: 12px;
+    .month {
+      @include font-style(fellixMedium, 500, 20px, 28px);
+    }
+    .day {
+      @include font-style(fellixBold, 700, 20px, 28px);
+    }
+    .time {
+      @include font-style(helvetica, 400, 16px, 20px);
+    }
+    .event-heading {
+      @include font-style(fellixBold, 700, 20px, 28px);
+    }
+    .event-desc {
+      @include font-style(helvetica, 400, 14px, 28px);
+    }
+  }
+
+}

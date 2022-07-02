@@ -1,0 +1,36 @@
+@import "../App.scss";
+
+.question-main {
+    display: flex;
+    gap: 5px;
+    background-color: rgb(233, 231, 231);
+}
+
+.question-inside {
+    width: 25%;
+}
+
+.question-title-main {
+    width: 87%;
+    padding: 20px;
+    background-color: #F3F4F8;
+
+    .question-title {
+        width: 92%;
+        margin: auto;
+        text-align: center;
+        @include flex(space-between, center);
+
+        p {
+            font-size: 22px;
+            font-weight: 400;
+        }
+    }
+}
+.question-cards-main {
+    @include flex(content, center);
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    height: 550px;
+}

@@ -1,0 +1,10 @@
+@import "../App.scss";
+
+.sidebar-container {
+    background-color: lightgray;
+    width: 5%;
+    @include flex(center,center);
+    flex-direction: column;
+    gap: 22px;
+  }
+ 

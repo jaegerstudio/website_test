@@ -1,0 +1,62 @@
+@import "../../App.scss";
+
+.participant-profile-main {
+  width: 100%;
+  display: flex;
+  background-color: rgb(233, 231, 231);
+}
+
+.participant-profile-inside {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  width: 25%;
+
+  background-color: #fff;
+}
+.participants-title-main {
+  @include flex(space-between, center);
+  width: 91.5%;
+}
+.participant-profile-detail {
+  padding: 24px 36px 0 36px;
+  .user-name {
+    padding-top: 24px;
+    @include font-style(HelveticaNeue, 400, 20px, 23px);
+  }
+  .user-email {
+    padding-top: 8px;
+    @include font-style(HelveticaNeue, 400, 16px, 22px);
+  }
+  .user-desc {
+    padding-top: 36px;
+    @include font-style(HelveticaNeue, 400, 16px, 28px);
+    text-align: center;
+  }
+}
+
+.participant-address-detail {
+  width: 93%;
+  padding: 36px 36px 48px 36px;
+  div {
+    display: flex;
+    gap: 24px;
+  }
+}
+
+.participant-option {
+  padding: 0 36px;
+  @include flex(space-between, center);
+
+  button:first-child {
+    @include bg-gradient();
+    color: white;
+  }
+
+  button {
+    width: 167px;
+    border-color: lightgray;
+    color: black;
+  }
+}

@@ -1,0 +1,65 @@
+@import '../App.scss';
+$signin-page-background : #F8F8F8;
+$white : #FFFF;
+$button-gradient : linear-gradient(90.98deg, #FF68C3 0%, #FF7474 29.69%, #5771F9 100%);
+
+h3 {
+    height: 0;
+}
+
+.sign-up-main {
+    height: 100vh;
+    background-color: $signin-page-background;
+    text-align: center;
+
+    .forgot-pass-form {
+        @include flex(center, center);
+        gap: 50px;
+        flex-direction: column;
+        background-color: $white;
+        width: 40%;
+        height: 450px;
+        margin: auto;
+    }
+    .MuiTextField-root {
+        width: 60%
+    }
+    .MuiButton-contained {
+        background: $button-gradient;
+        width: 60%;
+        color: $white;
+        font-size: 15px;
+    }
+}
+
+
+.sign-up-form {
+    background-color: $white;
+    width: 40%;
+    height: 450px;
+    margin: auto;
+    @include flex(center, center);
+    gap: 20px;
+    flex-direction: column;
+}
+
+.sign-up-form .MuiTextField-root {
+    width: 60%
+}
+
+.sign-up-form .MuiButton-contained {
+    background: $button-gradient;
+    width: 60%;
+    color: $white;
+    font-size: 15px;
+}
+
+.sign-up-option {
+    @include flex(space-evenly, center);
+    width: 80%;
+}
+
+.no-account span {
+    color: #5771F9;
+    cursor: pointer;
+}

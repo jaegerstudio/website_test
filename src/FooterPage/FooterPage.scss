@@ -1,0 +1,43 @@
+@import "../App.scss";
+
+.footer-page-container {
+  height: 260px;
+  width: 100%;
+  @include flex(space-around, center);
+  flex-direction: column;
+  background-color: #282828;
+  color: white;
+  position: static;
+  left: 0;
+  bottom: 0;
+}
+
+.footer-page-links {
+  width: 72%;
+  @include flex(space-between, center);
+  gap: 320px;
+}
+.footer-page-logo {
+  @include flex(space-between, center);
+  gap: 5px;
+}
+
+.footer-page-actions {
+  @include flex(center, center);
+  gap: 40px;
+}
+
+.footer-page-actions p {
+  @include font-style(HelveticaNeue, 400, 16px, 22.5px);
+}
+.footer-page-copyright {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1440px) {
+  
+  .footer-page-links {
+    width: 85%;
+  }
+
+}

@@ -1,0 +1,77 @@
+@import "../../App.scss";
+
+.abous-us-main {
+  width: 72%;
+  margin: 168px auto;
+  @include flex(space-between, center);
+  gap: 164px;
+
+  .about-col-1 {
+    position: relative;
+    .about-svg {
+      position: absolute;
+      top: 36%;
+      left: 35%;
+    }
+    min-width: 50%;
+    .gradient-heading {
+      @include title();
+      @include font-style(fellix, 400, 16px, 19px);
+    }
+    .main-heading {
+      @include font-style(fellix, 800, 40px, 48px);
+      @include main-h-color;
+      padding: 15px 0;
+    }
+    .para {
+      @include font-style(helvetica, 400, 18px, 31px);
+      @include para-color;
+      padding: 8px 0;
+    }
+  }
+  .about-col-2 {
+    min-width: 50%;
+    display: flex;
+    position: relative;
+    justify-items: center;
+    img {
+      width: 565px;
+      height: 329px;
+    }
+  }
+}
+
+.about-col-2 :nth-child(2){
+  position: absolute;
+  top: -50px;
+  left: 50px;
+  z-index: -10;
+}
+
+@media (max-width: 1366px) {
+  
+  .abous-us-main {
+    width: 82%;
+    gap: 64px;
+    
+    .about-col-1 {
+      .main-heading {
+        @include font-style(fellix, 800, 28px, 40px);
+      }
+      .para {
+        @include font-style(helvetica, 400, 16px, 28px);
+        padding: 6px 0;
+      }
+    }
+
+    .about-col-2 {
+     img {
+      width: 400px;
+      height: 230px;
+     } 
+    }
+  }
+
+  
+
+}
