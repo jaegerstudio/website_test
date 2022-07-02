@@ -15,7 +15,7 @@
     "html-react-parser": "^2.0.0",
     "node-sass": "^7.0.1",
     "react": "^16.x",
-    "react-dom": "^18.1.0",
+    "react-dom": "^16.x",
     "react-loader-spinner": "^5.1.5",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
